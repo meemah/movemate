@@ -4,7 +4,7 @@ import 'package:movemate/shared/util/theme/app_colors/app_colors.dart';
 import 'package:movemate/shared/util/theme/app_styles/app_style.dart';
 
 class AppTextField extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final Widget? prefixIcon;
   final String hintText;
   final Color? fillColor;
@@ -17,7 +17,7 @@ class AppTextField extends StatelessWidget {
 
   const AppTextField(
       {super.key,
-      required this.controller,
+      this.controller,
       this.readOnly = false,
       this.onChanged,
       this.showPrefixIconBorder = true,
@@ -45,11 +45,6 @@ class AppTextField extends StatelessWidget {
             minHeight: 25.h,
             minWidth: 25.w,
           ),
-          // suffixIconConstraints: BoxConstraints(
-          //   maxHeight: 25.h,
-          //   minHeight: 25.h,
-          //   minWidth: 25.w,
-          // ),
           suffixIcon: suffixIcon != null
               ? Container(
                   margin: EdgeInsets.only(right: 8.w),
