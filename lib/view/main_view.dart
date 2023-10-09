@@ -31,6 +31,7 @@ class MainView extends HookWidget {
         const HomeView(),
         const CalculateView(),
         const ShipmentHistoryView(),
+        Container(),
       ][selectedIndex.value],
     );
   }
