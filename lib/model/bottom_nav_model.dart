@@ -19,6 +19,10 @@ class BottomNavModel {
     BottomNavModel(
       icon: Icons.history,
       label: "Shipment",
+    ),
+    BottomNavModel(
+      icon: Icons.person_2_outlined,
+      label: "Profile",
     )
   ];
 }

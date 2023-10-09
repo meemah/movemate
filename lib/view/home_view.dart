@@ -129,57 +129,62 @@ class HomeView extends HookWidget {
             const TrackingDetailContainer(),
             const YMargin(15),
             const HeadingText(title: "Available Vehicles"),
-            SizedBox(
-              height: 200.h,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                children: ShipmentVehicleModel.shipmentVehicle
-                    .map((e) => Container(
-                          margin: EdgeInsets.only(right: 10.w),
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(8.r)),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(left: 10.w, top: 10.h),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      e.title,
-                                      style: AppStyle.mediumTextMedium(),
-                                    ),
-                                    const YMargin(5),
-                                    Text(
-                                      e.subTitle,
-                                      style: AppStyle.smallTextRegular(
-                                        color: AppColors.greyScale5,
+            Expanded(
+              child: SizedBox(
+                height: 200.h,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  children: ShipmentVehicleModel.shipmentVehicle
+                      .map((e) => Container(
+                            margin: EdgeInsets.only(right: 10.w),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8.r)),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding:
+                                      EdgeInsets.only(left: 10.w, top: 10.h),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        e.title,
+                                        style: AppStyle.mediumTextMedium(),
                                       ),
-                                    ),
-                                  ],
+                                      const YMargin(5),
+                                      Text(
+                                        e.subTitle,
+                                        style: AppStyle.smallTextRegular(
+                                          color: AppColors.greyScale5,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              const Spacer(),
-                              Container(
-                                padding: const EdgeInsets.only(left: 40),
-                                child: Align(
-                                    alignment: Alignment.bottomRight,
-                                    child: Image.asset(
-                                      e.icon,
-                                      scale: 0.5,
-                                      width:
-                                          MediaQuery.of(context).size.width / 4,
-                                    )),
-                              )
-                            ],
-                          ),
-                        ))
-                    .toList(),
-              ),
-            ).animate().moveX()
+                                const Spacer(),
+                                Container(
+                                  padding: const EdgeInsets.only(left: 40),
+                                  child: Align(
+                                      alignment: Alignment.bottomRight,
+                                      child: Image.asset(
+                                        e.icon,
+                                        scale: 0.5,
+                                        width:
+                                            MediaQuery.of(context).size.width /
+                                                4,
+                                      )),
+                                )
+                              ],
+                            ),
+                          ))
+                      .toList(),
+                ),
+              ).animate().moveX(),
+            )
           ],
         ),
       ),

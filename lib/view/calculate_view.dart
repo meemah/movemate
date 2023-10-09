@@ -80,28 +80,20 @@ class CalculateView extends HookWidget {
                 title: "Destination",
                 subTitle: "What are you sending?",
               ),
-              PopupMenuButton<String>(
-                initialValue: "Box",
-                onSelected: (String item) {},
-                itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-                  const PopupMenuItem<String>(
-                    value: "Box",
-                    child: Text('Box'),
-                  ),
-                ],
-                icon: AppTextField(
-                    prefixIcon: Image.asset(
-                      "asset/icon/icon_shipment_box.png",
-                    ),
-                    suffixIcon: const Icon(
-                      Icons.keyboard_arrow_down_sharp,
-                      color: AppColors.greyScale3,
-                    ),
-                    readOnly: true,
-                    fillColor: Colors.white,
-                    controller: TextEditingController(),
-                    hintText: "Item"),
-              ).animate().fadeIn(),
+              AppTextField(
+                      prefixIcon: Image.asset(
+                        "asset/icon/icon_shipment_box.png",
+                      ),
+                      suffixIcon: const Icon(
+                        Icons.keyboard_arrow_down_sharp,
+                        color: AppColors.greyScale3,
+                      ),
+                      readOnly: true,
+                      fillColor: Colors.white,
+                      controller: TextEditingController(),
+                      hintText: "Item")
+                  .animate()
+                  .fadeIn(),
               const YMargin(30),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
