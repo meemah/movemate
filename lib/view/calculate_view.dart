@@ -8,6 +8,7 @@ import 'package:movemate/shared/util/theme/app_styles/app_style.dart';
 import 'package:movemate/shared/widgets/app_button.dart';
 import 'package:movemate/shared/widgets/app_spacing.dart';
 import 'package:movemate/shared/widgets/app_textfield.dart';
+import 'package:movemate/view/success_view.dart';
 
 import '../shared/widgets/heading_text.dart';
 
@@ -165,7 +166,11 @@ class CalculateView extends HookWidget {
               ).animate().moveX(curve: Curves.easeIn),
               AppButton(
                 title: "Calculate",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const SuccessView();
+                  }));
+                },
               )
             ],
           ),

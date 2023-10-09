@@ -128,7 +128,7 @@ class HomeView extends HookWidget {
           children: [
             const TrackingDetailContainer(),
             const YMargin(15),
-            const HeadingText(title: "Available Vehicle"),
+            const HeadingText(title: "Available Vehicles"),
             SizedBox(
               height: 200.h,
               child: ListView(

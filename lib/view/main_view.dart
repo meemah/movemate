@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:movemate/model/bottom_nav_model.dart';
 import 'package:movemate/shared/widgets/bottom_nav_container.dart';
@@ -30,7 +29,7 @@ class MainView extends HookWidget {
       ),
       body: [
         const HomeView(),
-        const CalculateView().animate().fadeIn(),
+        const CalculateView(),
         const ShipmentHistoryView(),
       ][selectedIndex.value],
     );

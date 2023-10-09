@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:movemate/view/main_view.dart';
 
 void main() {
@@ -9,8 +8,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -18,9 +15,10 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
-          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          title: 'Movemate',
           theme: ThemeData(
-            textTheme: GoogleFonts.mulishTextTheme(),
+            fontFamily: "Mulish",
             visualDensity: VisualDensity.adaptivePlatformDensity,
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
